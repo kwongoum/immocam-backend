@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/immocam/immocam.iml" filepath="$PROJECT_DIR$/immocam/immocam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/immocam-backend.iml" filepath="$PROJECT_DIR$/.idea/immocam-backend.iml" />
+    </modules>
+  </component>
+</project>
