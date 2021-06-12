@@ -8,22 +8,32 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements  UserService{
+public class UserServiceImpl implements  IGenericService<User, Long>{
 
         @Autowired
         private UserRepository userRepository;
     @Override
-    public User saveUser(User user) {
+    public User save(User user) {
         return userRepository.save( user);
     }
 
     @Override
-    public List<User> listUser() {
+    public List<User> list() {
         return  userRepository.findAll();
     }
 
     @Override
-    public User getUser(Long id) {
+    public User get(Long id) {
         return userRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public User update(User user, Long id) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+        
     }
 }

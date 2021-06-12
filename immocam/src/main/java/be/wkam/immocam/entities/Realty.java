@@ -29,11 +29,11 @@ public class Realty implements Serializable {
     @JoinTable(name = "applies")
     private Collection<User> users;
 
-    @OneToMany(mappedBy = "realties", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "realty", fetch = FetchType.LAZY)
     private Collection<Media> medias;
 
     @ManyToOne
-    @JoinColumn (name = "apply_category_id")
+    @JoinColumn (name = "realties_categories_id")
     private RealtyCategory realtyCategory;
 
     @ManyToOne

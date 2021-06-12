@@ -46,7 +46,7 @@ public class User implements Serializable {
     @ManyToMany(mappedBy = "users")
     private Collection<Realty> realties;
 
-    @OneToMany(mappedBy = "users", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Collection<Media> medias;
  /*
  *  la relation OneToMany entre user et realties doit etre

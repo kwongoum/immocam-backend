@@ -10,24 +10,30 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class RealtyCategoryServiceImpl implements  RealtyCategoryService{
+public class RealtyCategoryServiceImpl implements  IGenericService<RealtyCategory,Long>{
 
         @Autowired
         private RealtyCategoryRepository realtyCategoryRepository;
 
 
     @Override
-    public RealtyCategory saveRealtyCategory(RealtyCategory realtyCategory) {
+    public RealtyCategory save(RealtyCategory realtyCategory) {
         return  realtyCategoryRepository.save(realtyCategory);
     }
 
     @Override
-    public List<RealtyCategory> listRealtyCategory() {
+    public List<RealtyCategory> list() {
         return realtyCategoryRepository.findAll();
     }
 
     @Override
-    public RealtyCategory getRealtyCategory(Long id) {
+    public RealtyCategory get(Long id) {
         return realtyCategoryRepository.findById(id).orElse(null);
+    }
+    public RealtyCategory update(RealtyCategory realtyCategory, Long id){
+        return null;
+    }
+    public void delete(Long id){
+
     }
 }

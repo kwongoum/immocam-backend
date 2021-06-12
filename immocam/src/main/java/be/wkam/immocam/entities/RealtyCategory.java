@@ -19,6 +19,6 @@ public class RealtyCategory implements Serializable {
     private String description;
     private Date createdAt;
 
-    @OneToMany(mappedBy = "realty_categories", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "realtyCategory", fetch = FetchType.LAZY)
     private Collection<Realty> realties;
 }

@@ -10,23 +10,30 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PermissionServiceImpl implements  PermissionService{
+public class PermissionServiceImpl implements  IGenericService<Permission, Long>{
 
         @Autowired
         private PermissionRepository permissionRepository;
 
     @Override
-    public Permission savePermission(Permission permission) {
+    public Permission save(Permission permission) {
         return  permissionRepository.save(permission);
     }
 
     @Override
-    public List<Permission> listPermission() {
+    public List<Permission> list() {
         return permissionRepository.findAll();
     }
 
     @Override
-    public Permission getPermission(Long id) {
+    public Permission get(Long id) {
         return permissionRepository.findById(id).orElse(null);
     }
+     @Override
+    public Permission update (Permission permission, Long id){
+         return  null;
+     }
+ public void delete(Long id){
+
+ }
 }

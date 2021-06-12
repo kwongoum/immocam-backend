@@ -10,24 +10,22 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class LanguageServiceImpl implements LanguageService{
+public class LanguageServiceImpl implements IGenericService<Language,Long>{
 
-        @Autowired
-        private LanguageRepository languageRepository;
+    @Autowired
+      private LanguageRepository languageRepository;
 
-
-    @Override
-    public Language saveMediaType(Language language) {
-        return  languageRepository.save(language);
-    }
-
-    @Override
-    public List<Language> listLanguage() {
-        return  languageRepository.findAll();
-    }
-
-    @Override
-    public Language getLanguage(Long id) {
-        return  languageRepository.findById(id).orElse(null);
-    }
+     public Language save(Language language){
+          return  languageRepository.save(language);
+     }
+      public List<Language> list(){
+          return languageRepository.findAll();
+      }
+      public Language get(Long id){
+          return languageRepository.findById(id).orElse(null);
+      }
+     public Language update(Language language, Long id){
+          return null;
+     }
+      public void delete(Long id){}
 }

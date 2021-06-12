@@ -8,24 +8,35 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TownServiceImpl implements  TownService{
+public class TownServiceImpl implements  IGenericService<Town,Long>{
 
         @Autowired
         private TownRepository townRepository;
 
 
     @Override
-    public Town saveTown(Town town) {
+    public Town save(Town town) {
         return townRepository.save(town);
     }
 
     @Override
-    public List<Town> listTown() {
+    public List<Town> list() {
         return townRepository.findAll();
     }
 
     @Override
-    public Town getTown(Long id) {
+    public Town get(Long id) {
         return townRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public Town update(Town town, Long id) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
+
 }

@@ -10,24 +10,27 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class GroupServiceImpl implements  GroupService{
+public class GroupServiceImpl implements  IGenericService<Group, Long>{
 
-        @Autowired
-        private GroupRepository groupRepository;
+    @Autowired
+    GroupRepository groupRepository;
 
-
+       @Override
+    public Group save(Group group){
+           return groupRepository.save(group);
+       }
+ @Override
+    public List<Group> list(){
+            return groupRepository.findAll();
+ }
+   @Override
+     public Group get(Long id){
+            return groupRepository.findById(id).orElse(null);
+   }
     @Override
-    public Group saveGroup(Group group) {
-        return groupRepository.save(group);
+    public  Group update(Group group, Long id){
+            return  null;
     }
-
     @Override
-    public List<Group> listGroup() {
-        return  groupRepository.findAll();
-    }
-
-    @Override
-    public Group getGroup(Long id) {
-        return groupRepository.findById(id).orElse(null);
-    }
+     public  void delete(Long id){}
 }

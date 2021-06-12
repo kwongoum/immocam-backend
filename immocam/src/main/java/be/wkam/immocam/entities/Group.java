@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.Collection;
 
 @Entity
+@Table(name= "groupes")
 @Data @NoArgsConstructor
 public class Group implements Serializable {
     @Id

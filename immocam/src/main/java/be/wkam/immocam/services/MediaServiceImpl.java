@@ -9,23 +9,31 @@ import java.util.List;
 
 @Service
 
-public class MediaServiceImpl implements  MediaService{
+public class MediaServiceImpl implements  IGenericService<Media, Long>{
 
         @Autowired
         private MediaRepository mediaRepository;
 
     @Override
-    public Media saveMediaType(Media media) {
+    public Media save(Media media) {
         return  mediaRepository.save(media);
     }
 
     @Override
-    public List<Media> listMediaType() {
+    public List<Media> list() {
         return  mediaRepository.findAll();
     }
 
     @Override
-    public Media getMediaType(Long id) {
-        return mediaRepository.findById(id).orElse(null);
+    public Media get(Long id) {
+        return  mediaRepository.findById(id).orElse(null);
     }
+    @Override
+    public Media update(Media media, Long id){
+        return  null;
+    }
+     @Override
+    public void delete(Long id){
+
+     }
 }

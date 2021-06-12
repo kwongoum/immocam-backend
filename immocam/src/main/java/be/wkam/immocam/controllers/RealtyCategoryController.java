@@ -1,19 +1,19 @@
 package be.wkam.immocam.controllers;
 
 import be.wkam.immocam.entities.RealtyCategory;
-import be.wkam.immocam.entities.User;
-import be.wkam.immocam.services.RealtyCategoryService;
-import be.wkam.immocam.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.Table;
 import java.util.List;
 
 @RestController
+        @Table(name = "realty_categories")
 public class RealtyCategoryController {
-@Autowired
+/*
+    @Autowired
     private RealtyCategoryService realtyCategoryService;
 
     @RequestMapping( value ="/realtyCategory", method = RequestMethod.POST)
@@ -26,6 +26,6 @@ public class RealtyCategoryController {
         return   realtyCategoryService.listRealtyCategory();
       }
 
-
+*/
 
 }

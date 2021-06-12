@@ -1,9 +1,6 @@
 package be.wkam.immocam.controllers;
 
 import be.wkam.immocam.entities.Permission;
-import be.wkam.immocam.entities.User;
-import be.wkam.immocam.services.PermissionService;
-import be.wkam.immocam.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +10,7 @@ import java.util.List;
 
 @RestController
 public class PermissionController {
-@Autowired
+/*@Autowired
     private PermissionService permissionService;
 
     @RequestMapping( value ="/permission", method = RequestMethod.POST)
@@ -27,5 +24,5 @@ public class PermissionController {
       }
 
 
-
+*/
 }

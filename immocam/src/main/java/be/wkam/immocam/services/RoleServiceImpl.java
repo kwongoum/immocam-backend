@@ -8,26 +8,33 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class RoleServiceImpl implements  RoleService{
+public class RoleServiceImpl implements   IGenericService<Role,Long>{
 
         @Autowired
         private RoleRepository roleRepository;
 
     @Override
-    public Role saveRole(Role role) {
+    public Role save(Role role) {
         return  roleRepository.save(role);
     }
 
     @Override
-    public List<Role> listRole() {
+    public List<Role> list() {
         return  roleRepository.findAll();
     }
 
     @Override
-    public Role getRole(Long id) {
+    public Role get(Long id) {
         return  roleRepository.findById(id).orElse(null);
     }
+     @Override
+  public  Role update (Role role, Long id) {
+         return null;
+     }
 
+        @Override
+        public void delete(Long id){
 
+      }
 
 }

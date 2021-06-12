@@ -10,6 +10,10 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
 
+/*
+ *  differents tyoes of media available:
+ * FILE(pdf, doc, docx, odt)- IMAGE (png, jpg, gif)- VIDEO(mp4, avi, etc.. )
+ * */
 @Entity
 @Data @NoArgsConstructor
 public class MediaType implements Serializable {

@@ -23,7 +23,7 @@ public class Media implements Serializable {
     private Date createdAt;
 
     @ManyToOne
-    @JoinColumn (name = "user_id")
+    @JoinColumn (name = "users_id")
     private User user;
 
     @ManyToOne
@@ -35,3 +35,4 @@ public class Media implements Serializable {
     private Realty realty;
 
 }
+

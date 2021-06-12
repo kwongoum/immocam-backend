@@ -19,7 +19,7 @@ public class Town implements Serializable {
     private String createdAt;
     private String updatedAt;
 
-    @OneToMany(mappedBy = "towns", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "town", fetch = FetchType.LAZY)
     private Collection<Realty> realties;
 
     @ManyToOne
