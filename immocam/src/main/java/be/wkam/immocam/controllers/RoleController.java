@@ -1,6 +1,7 @@
 package be.wkam.immocam.controllers;
 
 import be.wkam.immocam.entities.Role;
+import be.wkam.immocam.services.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,20 +11,20 @@ import java.util.List;
 
 @RestController
 public class RoleController {
-/*
+
     @Autowired
-    private RoleService roleService;
+    private IGenericService<Role,Long> roleService;
 
     @RequestMapping( value ="/role", method = RequestMethod.POST)
     public Role saveUser(Role role) {
-        return roleService.saveRole(role);
+        return roleService.save(role);
     }
 
-        @RequestMapping(name = "/roles", method =RequestMethod.GET )
+        @RequestMapping(value= "/roles", method =RequestMethod.GET )
       public List<Role> listRole(){
-        return  roleService.listRole();
+        return (List<Role>) roleService.list();
       }
 
-*/
+
 
 }

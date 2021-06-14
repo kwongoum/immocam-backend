@@ -11,7 +11,7 @@ import java.util.List;
 @Primary
 public interface IGenericService<T,U> {
     public T save(T t); //C
-    public Collection<T> list();     //R all
+    public List<T> list();     //R all
     public T get(U id); // R  single
     public T update(T t, U id ); // U update
     public void delete(U id  ); // D delete

@@ -11,6 +11,7 @@ import java.util.Date;
 
 
 @Entity
+@Table(name = "countries")
 @Data @NoArgsConstructor
 public class Country implements Serializable {
     @Id

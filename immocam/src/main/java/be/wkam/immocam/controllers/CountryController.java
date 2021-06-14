@@ -12,20 +12,21 @@ import java.util.List;
 
 @RestController
 public class CountryController {
-/*@Autowired
+@Autowired
     private IGenericService<Country,Long>  countryService;
 
-    @RequestMapping( value ="/user", method = RequestMethod.POST)
-    public User saveUser(User user) {
-        return userService.save(user);
+    @RequestMapping( value="/country", method = RequestMethod.POST)
+    public  Country saveCountry(Country country) {
+        return  countryService.save(country);
     }
 
-        @RequestMapping(name = "/users", method =RequestMethod.GET )
-      public List<User> listUsers(){
-        return  userService.listUser();
+        @RequestMapping(value= "/countries", method =RequestMethod.GET )
+      public List<Country> listCountry(){
+
+        return countryService.list();
       }
 
 
-*/
+
 
 }

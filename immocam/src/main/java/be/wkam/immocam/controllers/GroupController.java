@@ -1,32 +1,29 @@
 package be.wkam.immocam.controllers;
 
 import be.wkam.immocam.entities.Group;
-import be.wkam.immocam.entities.User;
+
+import be.wkam.immocam.services.IGenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 public class GroupController {
-/*@Autowired
-    private GroupService groupService;
 
-    @RequestMapping( value ="/group", method = RequestMethod.POST)
-    public User saveGroupr(Group group) {
-        return null;
-    }
+     @Autowired
+    private IGenericService<Group,Long> groupService;
 
-        @RequestMapping(name = "/groups", method =RequestMethod.GET )
-      public List<Group> listGroups(){
-       return  groupService.listGroup();
+     @RequestMapping(value = "/group", method = RequestMethod.POST)
+            Group  saveGroup(Group group){
+                 return groupService.save(group);
+             }
 
 
-      }
-
-
-*/
+    // @RequestMapping(name = "/groups", method =RequestMethod.GET)
+    //Collection<Group> listGroup (){
+     //     return  groupService.list();
+    //}
 
 }

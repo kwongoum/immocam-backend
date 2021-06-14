@@ -23,7 +23,7 @@ public class UserController {
         return userService.save(user);
     }
 
-        @RequestMapping(name = "/users", method =RequestMethod.GET )
+        @RequestMapping(value = "/users", method =RequestMethod.GET )
       public List<User> listUser(){
 
         return (List<User>) userService.list();
