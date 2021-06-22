@@ -6,23 +6,29 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+
 @Entity
+@Table(name = "towns")
 @Data @NoArgsConstructor
 public class Town implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String countryId;
-    private String code;
-    private String name;
-    private String deleteIntegrity;
-    private String createdAt;
-    private String updatedAt;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
 
-    @OneToMany(mappedBy = "town", fetch = FetchType.LAZY)
-    private Collection<Realty> realties;
+   String  code;
 
-    @ManyToOne
-    @JoinColumn (name = "countries_id")
-    private Country country;
+   String  name ;
+    boolean deleteIntegrity;
+    Date createdAt;
+    Date updatedAt;
+@ManyToOne
+@JoinColumn(name = "country_id")
+private Country country;
+@OneToMany(mappedBy = "town", fetch =FetchType.LAZY)
+private Collection<Realty> realties;
+
+
 }
+

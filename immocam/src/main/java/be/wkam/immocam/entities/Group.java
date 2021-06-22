@@ -10,16 +10,18 @@ import java.util.Collection;
 @Table(name= "groupes")
 @Data @NoArgsConstructor
 public class Group implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nameEn;
-    private String nameFr;
-    // OneToOne CAN be a simple aggregation
-    @OneToOne
-    private Role role;
 
-    @ManyToMany( mappedBy = "groups")
+    @OneToOne
+    @JoinColumn(name = "role_id")
+    private Role role; // simple aggregation
+
+    private String  nameEn;
+    private String nameFr;
+
+    @ManyToMany(mappedBy = "groups")
     private Collection<User> users;
 
 
